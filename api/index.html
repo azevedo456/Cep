@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço por CEP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Endereço por CEP</h1>
+        <form id="form-cep">
+            <label for="cep">Digite o CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="Ex: 01001-000" maxlength="10" required>
+            <button type="submit">Consultar</button>
+        </form>
+        
+        <div id="endereco" class="result">
+            <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+            <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+            <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+            <p><strong>Estado:</strong> <span id="estado"></span></p>
+        </div>
+
+        <div id="erro" class="error-message">
+            <p>Erro: CEP não encontrado ou inválido. Tente novamente!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
